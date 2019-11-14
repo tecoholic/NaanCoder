@@ -1,0 +1,30 @@
+{% extends "_base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<section id="first-hero" class="hero is-fullheight-with-navbar is-dark is-bold">
+  <div class="hero-body">
+    <div class="container columns is-vcentered">
+      <div class="column is-half">
+        <h1 class="title is-spaced">
+          {% trans "Welcome to NaanCoder" %}
+        </h1>
+        <h2 class="subtitle">
+          {% blocktrans %}
+            Computer programming is fun. It is useful in all walks of life.
+            Not everyone needs to be a software engineer to write code.
+            <br>
+            <br>
+            Learn to talk to your computer and make it do things.
+          {% endblocktrans %}
+        </h2>
+        <a href="{% url "index" %}" class="button">Get Started</a>
+      </div>
+      <div class="column is-half">
+        <img src="{% static "images/undraw_Firmware.svg" %}" alt="Code" class="image">
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

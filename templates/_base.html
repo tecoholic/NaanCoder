@@ -1,0 +1,26 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block page_title %}NaanCoder - நான்கோடர்{% endblock %}</title>
+  <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
+  <!--[if IE]><link rel="shortcut icon" href="{% static "images/logo.ico" %}"><![endif]-->
+
+  <!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size. -->
+  <link rel="apple-touch-icon-precomposed" href="{% static "images/logo180.png" %}">
+
+  <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+  <link rel="icon" href="{% static "images/logo.png" %}">
+  <link rel="stylesheet" href="{% static "css/bulma.min.css" %}">
+  <link rel="stylesheet" href="{% static "css/main.css" %}">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+{% include "_nav.html" %}
+  {% block content %}
+  {% endblock %}
+  </body>
+</html>
